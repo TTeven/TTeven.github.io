@@ -1,0 +1,67 @@
+@font-face{
+    font-family: blacklist;
+    src: url('../assets/fonts/The_Blacklist.ttf');
+}
+.blur{
+    background: url("../assets/atmosp.jpg") no-repeat center center fixed;
+    background-size:cover;
+    overflow: hidden;
+    position: absolute;
+    filter: blur(5px);
+    top: -5px;
+    left: -5px;
+    width: 100.2%;
+    height: 100.5%
+}
+body{
+    background: url("../assets/atmosp.jpg") no-repeat center center fixed;
+    background-size:cover;
+}
+.centerhome{
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 50px;
+    width: 600px;
+    height: 200px;
+    text-align: center;
+    color:white;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);  
+}
+.centerhome img{
+    width:40%;
+    height:40%;
+    padding-top: 5px; 
+    padding-bottom: 50px;
+}
+.centerhome #homep1{
+    top:100px;
+    display: block;
+    font-family: blacklist;
+    font-size: 
+}
+.botnav{
+    position: absolute;
+    display:inline;
+    left:50%;
+    top:90%;
+    transform: translate(-50%, -50%);  
+}
+.botnav .botnavbutton{
+    padding-right: 60px;
+    content: url('/assets/button_base.png');
+}
+.botnav .botnavbutton:hover{
+    content: url('/assets/button_highlight.png');
+}
+.aboutus{
+    display: none;
+    width:99.5%;
+    height: 30%;
+    left:-1px;
+    top:10%;
+    border: 5px solid white;
+    position: absolute;
+}
