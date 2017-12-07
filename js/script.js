@@ -21,7 +21,6 @@ $("#button1").click(function(){
     {
         
     }
-    $("#button1").css("content", "url('/assets/button_highlight.png')");
     $(".homepage").fadeIn("slow");
     //console.log($(".aboutus").css("display"));
     
@@ -45,7 +44,6 @@ $("#button2").click(function(){
     {
         
     }
-    $("#button2").css("content", "url('/assets/button_highlight.png')");
     $(".aboutus").fadeIn("slow");
     //console.log($(".aboutus").css("display"));
     
