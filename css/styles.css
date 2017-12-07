@@ -51,10 +51,10 @@ body{
 }
 .botnav .botnavbutton{
     padding-right: 60px;
-    content: url('/assets/button_base.png');
+    content: url('../assets/button_base.png');
 }
 .botnav .botnavbutton:hover{
-    content: url('/assets/button_highlight.png');
+    content: url('../assets/button_highlight.png');
 }
 .aboutus{
     display: none;
