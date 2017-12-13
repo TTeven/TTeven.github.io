@@ -44,24 +44,47 @@ body{
 }
 .botnav{
     position: absolute;
-    display:inline;
+    display:flex;
     left:50%;
     top:90%;
     transform: translate(-50%, -50%);  
 }
 .botnav .botnavbutton{
-    padding-right: 60px;
-    content: url('../assets/button_base.png');
+    border-radius: 50%;
+    height:40px;
+    width:40px;
+    background-color: darkgray;
+    margin:25px;
 }
 .botnav .botnavbutton:hover{
-    content: url('../assets/button_highlight.png');
+    background-color: lightgray; 
 }
+.botnavtext{
+    position:absolute; 
+    left:50%;
+    min-width:500px;
+    text-align: center;
+    margin:10px;
+    padding-left: 10;
+    top:94%;
+    transform: translate(-50%, -50%);  
+}
+.botnavtext .bottext{
+    top: 50px;
+    display:inline;
+    margin:4%;
+    color:floralwhite;
+    font-family: blacklist;
+    font-size: 20px;
+}
+
 .aboutus{
     display: none;
-    width:99.5%;
-    height: 30%;
-    left:-1px;
+    width:90%;
+    height: 20%;
     top:10%;
+    left:5%;
     border: 5px solid white;
+    border-radius: 50px;
     position: absolute;
 }
