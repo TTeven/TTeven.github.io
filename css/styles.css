@@ -42,43 +42,40 @@ body{
     font-family: blacklist;
     font-size: 
 }
-.botnav{
+.footer{
     position: absolute;
-    display:flex;
-    left:50%;
-    top:90%;
-    transform: translate(-50%, -50%);  
+    width: 99.3%;
+    min-width: 500px;
+    bottom: 2%;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-.botnav .botnavbutton{
+.navlink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.circlebutton {
     border-radius: 50%;
-    height:40px;
-    width:40px;
+    height: 40px;
+    width: 40px;
     background-color: darkgray;
-    margin:25px;
+    margin: 0px 25px 0px 25px;
 }
-.botnav .botnavbutton:hover{
+.circlebutton:hover{
     background-color: lightgray; 
 }
-.botnavtext{
-    position:absolute; 
-    left:50.1%;
-    min-width:500px;
-    text-align: center;
-    margin:10px;
-    padding-left: 10;
-    top:93%;
-    transform: translate(-50%, -50%);  
-}
-.botnavtext .bottext{
-    top: 50px;
-    display:inline;
-    margin:4%;
-    color:floralwhite;
+.navtext {
+    color: #fff;
+  
+    position: relative;
+    left: -1px;
+  
     font-family: blacklist;
     font-size: 20px;
-}
-.botnavtext .bottext#bottext3{
-    margin-left: 30px;
+    white-space: nowrap;
 }
 
 .aboutus{
