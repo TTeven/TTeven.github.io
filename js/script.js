@@ -155,16 +155,25 @@ function loadpage(page1, page2){
 }
 
 function init(){
-    
+    var bg1 = new Image();
+    var bg2 = new Image();
+    var bg3 = new Image();
+    bg1.src = "../assets/atmosp.jpg";
     if (typeof(Storage) !== "undefined") {
-    // Store
-    //localStorage.setItem("lastname", "Smith");
-    // Retrieve
     currenttheme = parseInt(localStorage.getItem("themestore"));
-    settheme(currenttheme);
-    } else {
-    console.log("This browser does not support local storage!")
+    if (localStorage.getItem("themestore") === null)
+    {
+        settheme(1);
     }
+    else
+    {
+        settheme(currenttheme);
+    }
+    } else {
+    console.log("This browser does not support local storage!");
+    }
+    bg2.src = "../assets/wlgyl.png";
+    bg3.src = "../assets/atmos_green.jpg";
     $(".aboutus").css("display", "block");
     $(".aboutus").fadeOut(0);
     $(".themes").css("display", "inline");
