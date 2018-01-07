@@ -2,6 +2,14 @@
     font-family: blacklist;
     src: url('../assets/fonts/The_Blacklist.ttf');
 }
+@font-face{
+        font-family: phyton;
+        src: url('../assets/fonts/Phyton.ttf');
+}
+@font-face{
+        font-family: quantify;
+        src: url('../assets/fonts/Quantify.ttf');
+}
 .blur{
     background-size:cover;
     overflow: hidden;
@@ -14,6 +22,22 @@
 }
 body{
     background-size:cover;
+}
+.header{
+    color: white;
+    border: 5px solid white;
+    position:absolute;
+    font-family: quantify;
+    font-size: 50px;
+    top: 50px;
+    padding:10px;
+    left: 50%;
+    border-radius: 10px;
+    width:700px;
+    text-align: center;
+    transform: translate(-50%, -50%); 
+    background-color: black;
+    display:none;
 }
 .centerhome{
     background-color: black;
@@ -37,7 +61,7 @@ body{
 .centerhome #homep1{
     top:100px;
     display: block;
-    font-family: blacklist;
+    font-family: quantify;
     font-size: 
 }
 .footer{
@@ -65,10 +89,8 @@ body{
 
 .navtext {
     color: #fff;
-  
     position: relative;
     left: -1px;
-  
     font-family: blacklist;
     font-size: 20px;
     white-space: nowrap;
@@ -78,24 +100,47 @@ body{
     display:none;
 
 }
-.aboutus #slider1{
+.aboutus .aboutboxes{
     width:90%;
-    height: 20%;
-    top:10%;
-    left:5%;
+    height: 35%;
     border: 5px solid white;
-    background-color:darkslateblue;
     border-radius: 20px;
+    background-color:darkslateblue;
     position: absolute;
+    min-width: 700px;
+}
+.aboutus .aboutboxes #info{
+    margin-left: 10px;
+    width: 700px;
+    min-width: inherit;
+    color: white
+}
+.aboutus .aboutboxes #head{
+    color: white;
+    text-align: center;
+}
+.aboutus #slider1{
+    top:10%;
+    left:5%;   
 }
 .aboutus #slider2{
-    top:35%;
+    top:50%;
     left:5%;
-    width:90%;
-    height: 20%;
-    border: 5px solid white;
-    border-radius: 50px;
-    position: absolute;
+}
+#musicbox{
+    text-align: center;
+}
+.musicpreview{
+    width: 200px;
+    height: 200px;
+    padding-right: 50px;
+    padding-left: 50px;
+    display: inline-block;
+}
+#musicplayer{
+    width: 200px;
+    background-color: white;
+    height: 40px;
 }
 .tours{
     display:none;
@@ -105,7 +150,7 @@ body{
     text-align: center;
 }
 .themes h{
-    font-family: blacklist;
+    font-family: quantify;
     position:absolute;
     display: inline;
     transform: translate(-50%, -50%);
@@ -153,7 +198,7 @@ body{
     text-align: center;
     padding:10px;
     position:absolute;
-    font-family: blacklist;
+    font-family: phyton;
     transform: translate(-50%, -50%);  
 }
 .themes .themebuttons:hover{

@@ -1,4 +1,4 @@
-var currenttheme = 1;
+var currenttheme;
 $(function(){
 
 init();
@@ -6,41 +6,44 @@ var currentpage = 1;
 
 console.log("Ready");
 //Yes i understand this code is extremely inefficent - but it is the only way i have found to work so far
-$("#button1").mouseenter(function(){
-   $("#bottext1").fadeTo(100, 1); 
-});
-$("#button1").mouseleave(function(){
-   $("#bottext1").fadeTo(100, 0.10); 
+    
+$('#button1').hover(function() {       
+    $("#bottext1").fadeTo(200, 1); 
+}, function() {
+    $("#bottext1").fadeTo(200, 0.10);     
 });
     
-$("#button2").mouseenter(function(){
-   $("#bottext2").fadeTo(100, 1); 
-});
-$("#button2").mouseleave(function(){
-   $("#bottext2").fadeTo(100, 0.10); 
-});
-    
-$("#button3").mouseenter(function(){
-   $("#bottext3").fadeTo(100, 1); 
-});
-$("#button3").mouseleave(function(){
-   $("#bottext3").fadeTo(100, 0.10); 
+$('#button2').hover(function() {       
+    $("#bottext2").fadeTo(200, 1); 
+}, function() {
+    $("#bottext2").fadeTo(200, 0.10);     
 });
     
-$("#button4").mouseenter(function(){
-   $("#bottext4").fadeTo(100, 1); 
-});
-$("#button4").mouseleave(function(){
-   $("#bottext4").fadeTo(100, 0.10); 
-});
-    
-$("#button5").mouseenter(function(){
-   $("#bottext5").fadeTo(100, 1); 
-});
-$("#button5").mouseleave(function(){
-   $("#bottext5").fadeTo(100, 0.10); 
+$('#button3').hover(function() {       
+    $("#bottext3").fadeTo(200, 1); 
+}, function() {
+    $("#bottext3").fadeTo(200, 0.10);     
 });
     
+$('#button4').hover(function() {       
+    $("#bottext4").fadeTo(200, 1); 
+}, function() {
+    $("#bottext4").fadeTo(200, 0.10);     
+});
+    
+$('#button5').hover(function() {       
+    $("#bottext5").fadeTo(200, 1); 
+}, function() {
+    $("#bottext5").fadeTo(200, 0.10);     
+});
+
+/*$(".musicpreview#1").hover(function(){
+    $("#1#musicplayer").css("display", "inline");
+    
+}, function(){
+    $("#1#musicplayer").css("display", "none");
+    
+});*/
 $("#button1").click(function(){
 
     loadpage(currentpage, 1);
@@ -92,7 +95,7 @@ $('.circlebutton').hover(function() {
             $(this).css("background-color", "lightgray");
         break;
         case 2:
-            $(this).css("background-color", "#fff419");
+            $(this).css("background-color", "#ff6b6b");
         break;
         case 3:
             $(this).css("background-color", "#1cff5f");
@@ -106,7 +109,7 @@ $('.circlebutton').hover(function() {
             $(this).css("background-color", "darkgray");
         break;
         case 2:
-            $(this).css("background-color", "#fffa8e");
+            $(this).css("background-color", "#ff8e8e");
         break;
         
         case 3:
@@ -138,6 +141,7 @@ function loadpage(page1, page2){
     switch(page2){
         case 1:
             $(".homepage").fadeIn("slow");
+            $(".header").fadeOut("slow");
             break;
         case 2:
             $(".aboutus").fadeIn("slow");
@@ -150,20 +154,28 @@ function loadpage(page1, page2){
             break;
         case 5:
     }
+        if (page2 != 1)
+        {
+            $(".header").fadeIn("slow");
+            //$(".header").css("display", "block");
+        }
     }
             
 }
 
 function init(){
-    var bg1 = new Image();
-    var bg2 = new Image();
-    var bg3 = new Image();
-    bg1.src = "../assets/atmosp.jpg";
+    var img1 = new Image();
+    var img2 = new Image();
+    var img3 = new Image();
+    img1.src = 'assets/atmosp.jpg';
+    img2.src = 'assets/wlgyl.png';
+    img3.src = 'assets/atmos_green.jpg';
     if (typeof(Storage) !== "undefined") {
     currenttheme = parseInt(localStorage.getItem("themestore"));
     if (localStorage.getItem("themestore") === null)
     {
         settheme(1);
+        currenttheme = 1;
     }
     else
     {
@@ -172,12 +184,10 @@ function init(){
     } else {
     console.log("This browser does not support local storage!");
     }
-    bg2.src = "../assets/wlgyl.png";
-    bg3.src = "../assets/atmos_green.jpg";
-    $(".aboutus").css("display", "block");
+    /*$(".aboutus").css("display", "block");
     $(".aboutus").fadeOut(0);
     $(".themes").css("display", "inline");
-    $(".themes").fadeOut(0);
+    $(".themes").fadeOut(0)*/
     $("#bottext1").fadeTo(100, 0.10);
     $("#bottext2").fadeTo(100, 0.10);
     $("#bottext3").fadeTo(100, 0.10);
@@ -189,19 +199,28 @@ function settheme(theme){
     switch(theme)
     {
         case 1:
-            $("body").css("background", 'url("../assets/atmosp.jpg") no-repeat center center fixed');
+            $("body").css("background", 'url("assets/atmosp.jpg") no-repeat center center fixed');
             $(".circlebutton").css("background-color", "darkgray");
-            $(".blur").css("background", 'url("../assets/atmosp.jpg") no-repeat center center fixed');
+            $(".header").css("background-color", "black");
+            $(".header").css("color", "white");
+            $(".header").css("border", "5px solid white");
+            $(".blur").css("background", 'url("assets/atmosp.jpg") no-repeat center center fixed');
             break;
         case 2:
-            $("body").css("background", 'url("../assets/wlgyl.png") no-repeat center center fixed');
-            $(".circlebutton").css("background-color", "#fffa8e");
-            $(".blur").css("background", 'url("../assets/wlgyl.png") no-repeat center center fixed');
+            $("body").css("background", 'url("assets/wlgyl.png") no-repeat center center fixed');
+            $(".circlebutton").css("background-color", "#ff8e8e");
+            $(".header").css("background-color", "black");
+            $(".header").css("color", "white");
+            $(".header").css("border", "5px solid white");
+            $(".blur").css("background", 'url("assets/wlgyl.png") no-repeat center center fixed');
             break;
         case 3:
-            $("body").css("background", 'url("../assets/atmos_green.jpg") no-repeat center center fixed');
+            $("body").css("background", 'url("assets/atmos_green.jpg") no-repeat center center fixed');
             $(".circlebutton").css("background-color", "#72ff9c");
-            $(".blur").css("background", 'url("../assets/atmos_green.jpg") no-repeat center center fixed');
+            $(".header").css("background-color", "#72ff9c");
+            $(".header").css("color", "black");
+            $(".header").css("border", "5px solid black");
+            $(".blur").css("background", 'url("assets/atmos_green.jpg") no-repeat center center fixed');
             
     }
 }
