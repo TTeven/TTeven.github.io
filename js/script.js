@@ -165,7 +165,7 @@ function loadpage(page1, page2){
             break;
         case 5:
     }
-        if (page2 != 1 && $(window).width() < 400)
+        if (page2 != 1 && $(window).width() < 750)
         {
             $(".header").fadeIn(fade);
             //$(".header").css("display", "block");
