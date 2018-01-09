@@ -47,6 +47,7 @@ body{
     width: 600px;
     height: 200px;
     text-align: center;
+
     color:white;
     position: absolute;
     left: 50%;
@@ -54,8 +55,8 @@ body{
     transform: translate(-50%, -50%);  
 }
 .centerhome img{
-    width:300px;
-    height:100px;
+    width:200px;
+    height:70px;
     padding-top: 5px; 
     padding-bottom: 50px;
 }
@@ -63,7 +64,6 @@ body{
     top:100px;
     display: block;
     font-family: quantify;
-    font-size: 
 }
 .footer{
     position: absolute;
@@ -108,7 +108,7 @@ body{
     border-radius: 20px;
     background-color:darkslateblue;
     position: absolute;
-    min-width: 700px;
+    
 }
 .aboutus .aboutboxes #info{
     margin-left: 10px;
@@ -247,20 +247,20 @@ body{
     border-bottom: 5px solid white;
     position:fixed;
     min-width:0;
-}
-.themes #themeone{
+    }
+    .themes #themeone{
     width:90%;
     height: 150px;
     left:50%;
     top: 200px;
     }
-.themes #themetwo{
+    .themes #themetwo{
     width:90%;
     height: 150px;
     left:50%;
     top: 400px;
     }
-.themes #themethree{
+    .themes #themethree{
     width:90%;
     height: 150px;
     left:50%;
@@ -273,5 +273,23 @@ body{
     }
     .centerhome{
         width:90%;
+        font-size: 20px;
+    }
+    .navtext{
+        padding-top: 5px;
+    }
+    .aboutus .aboutboxes{
+        width:90%;
+        height:400px;
+    }
+    .aboutus #slider1{
+        top:100px;
+    }
+    .aboutus #slider1 #info{
+        width:90%;
+
+    }
+    .aboutus .aboutboxes#slider2{
+    top:530px;
     }
 }
