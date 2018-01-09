@@ -281,9 +281,11 @@ body{
     .aboutus .aboutboxes{
         width:90%;
         height:400px;
+        
     }
     .aboutus #slider1{
         top:100px;
+        left: 4%;
     }
     .aboutus #slider1 #info{
         width:90%;
@@ -291,5 +293,6 @@ body{
     }
     .aboutus .aboutboxes#slider2{
     top:530px;
+        left: 4%;
     }
 }
