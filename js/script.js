@@ -1,4 +1,12 @@
 var currenttheme;
+var playing1 = false;
+var playing2 = false;
+var playing3 = false;
+var song1 = new Audio('assets/music/GLU_preview.mp3');
+var song2 = new Audio('assets/music/LEM_preview.mp3');
+var song3 = new Audio('assets/music/SEV_preview.mp3');
+
+
 $(function(){
 
 init();
@@ -37,13 +45,6 @@ $('#button5').hover(function() {
     $("#bottext5").fadeTo(200, 0.10);     
 });
 
-/*$(".musicpreview#1").hover(function(){
-    $("#1#musicplayer").css("display", "inline");
-    
-}, function(){
-    $("#1#musicplayer").css("display", "none");
-    
-});*/
 $("#button1").click(function(){
 
     loadpage(currentpage, 1);
@@ -62,7 +63,14 @@ $("#button2").click(function(){
     
     currentpage = 2;
 });
+$("#button3").click(function(){
     
+    loadpage(currentpage, 3);
+    //console.log($(".aboutus").css("display"));
+    
+    
+    currentpage = 3;
+});
 $("#button4").click(function(){
     
     loadpage(currentpage, 4);
@@ -72,6 +80,95 @@ $("#button4").click(function(){
     currentpage = 4;
 });
     
+$("#play1").click(function(){
+    if(playing2)
+    {
+        playing2 = false;
+        $("#play2").html("Play");
+        song2.pause();
+    }
+    if (playing3)
+    {
+        playing3 = false;
+        $("#play3").html("Play");
+        song3.pause();
+    }
+    if (!playing1)
+    {
+        playing1 = true;
+        song1.volume = 0.05;
+        song1.play();
+        $("#play1").html("Stop");
+        console.log("playing song 1");
+    }
+    else
+    {
+        playing1 = false;
+        song1.pause();
+        $("#play1").html("Play");
+    }
+    
+});
+
+$("#play2").click(function(){
+    if(playing1)
+    {
+        playing1 = false;
+        $("#play1").html("Play");
+        song1.pause();
+    }
+    if (playing3)
+    {
+        playing3 = false;
+        $("#play3").html("Play");
+        song3.pause();
+    }
+    if (!playing2)
+    {
+        playing2 = true;
+        song2.volume = 0.05;
+        song2.play();
+        $("#play2").html("Stop");
+        console.log("playing song 2");
+    }
+    else
+    {
+        playing2 = false;
+        song2.pause();
+        $("#play2").html("Play");
+    }
+    
+});
+    
+$("#play3").click(function(){
+    if(playing1)
+    {
+        playing1 = false;
+        $("#play1").html("Play");
+        song1.pause();
+    }
+    if (playing2)
+    {
+        playing2 = false;
+        $("#play2").html("Play");
+        song2.pause();
+    }
+    if (!playing3)
+    {
+        playing3 = true;
+        song3.volume = 0.05;
+        song3.play();
+        $("#play3").html("Stop");
+        console.log("playing song 3");
+    }
+    else
+    {
+        playing3 = false;
+        song3.pause();
+        $("#play3").html("Play");
+    }
+    
+});
 $("#themeselect1").click(function(){
     settheme(1);
     localStorage.setItem("themestore", "1");
@@ -138,7 +235,7 @@ function loadpage(page1, page2){
             $(".aboutus").fadeOut(fade);
             break;
         case 3:
-            
+            $(".tours").fadeOut(fade);
             break;
         case 4:
             $(".themes").fadeOut(fade);
@@ -154,7 +251,7 @@ function loadpage(page1, page2){
             $(".aboutus").fadeIn(fade);
             break;
         case 3:
-            
+            $(".tours").fadeIn(fade);
             break;
         case 4:
             $(".themes").fadeIn(fade);
@@ -165,7 +262,7 @@ function loadpage(page1, page2){
             break;
         case 5:
     }
-        if (page2 != 1 && ($(window).width() > 400 || $(document).width() > 400))
+        if (page2 != 1 && ($(window).width() > 1441 || $(document).width() > 1441))
         {
             $(".header").fadeIn(fade);
             //$(".header").css("display", "block");

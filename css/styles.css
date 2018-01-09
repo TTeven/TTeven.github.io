@@ -127,9 +127,11 @@ body{
 .aboutus #slider2{
     top:50%;
     left:5%;
+    height: 37%;
 }
 #musicbox{
     text-align: center;
+    bottom: 50px;
 }
 .musicpreview{
     width: 200px;
@@ -138,13 +140,73 @@ body{
     padding-left: 50px;
     display: inline-block;
 }
-#musicplayer{
-    width: 200px;
+.musicplayer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: quantify;
+    background-color: black;
+    color:white;
+    border-radius: 5px;
+}
+.musicplayer:hover{
     background-color: white;
-    height: 40px;
+    color:black;
+}
+#musicbox .albumtitle{
+    font-family: quantify;
+    background-color: white;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 .tours{
     display:none;
+}
+.tours #tourboxslider{
+    position: absolute;
+    background-color: darkslateblue;
+    width:90%;
+    height: 70%;
+    padding: 10px;
+    left:4%;
+    top:12%;
+    border: 5px solid white;
+    border-radius: 50px;
+}
+.tours .tourboxes{
+    background-color:white;
+    margin: 20px;
+    margin-top: 50px;
+    width:232px;
+    height: 232px;
+    border: 5px solid black;
+    border-radius: 30px;
+    display:inline-block;
+    color:black;
+    font-family: quantify;
+    
+    text-align: center;
+}
+.tours button{
+    
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border:3px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.tours button:hover{
+    background-color: darkslateblue;
+    color: white;
+}
+.tours h2{
+    font-size: 20px;
 }
 .themes{
     display: none;
@@ -248,6 +310,15 @@ body{
     position:fixed;
     min-width:0;
     }
+    .tours #tourboxslider{
+        top:100px;
+        left:1px;
+        width:90%;
+        height:3800px;
+    }
+    .tours .tourboxes{
+        display: inline-grid;
+    }
     .themes #themeone{
     width:90%;
     height: 150px;
@@ -292,7 +363,13 @@ body{
 
     }
     .aboutus .aboutboxes#slider2{
-    top:530px;
+        top:530px;
+        height:1000px;
         left: 4%;
     }
+    .musicpreview{
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
 }
