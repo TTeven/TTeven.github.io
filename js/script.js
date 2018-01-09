@@ -12,7 +12,7 @@ $('#button1').hover(function() {
 }, function() {
     $("#bottext1").fadeTo(200, 0.10);     
 });
-    
+  
 $('#button2').hover(function() {       
     $("#bottext2").fadeTo(200, 1); 
 }, function() {
@@ -120,43 +120,54 @@ $('.circlebutton').hover(function() {
 
 });
 
-function loadpage(page1, page2){
+function loadpage(page1, page2){    
+    var fade = 200;
+    var mobile = false;
+    if($(window).width() < 400)
+    {
+        fade = 0;
+        mobile = false;
+    }
     if (page1 != page2)
     {
     switch(page1){
         case 1:
-            $(".homepage").fadeOut("slow");
+            $(".homepage").fadeOut(fade);
             break;
         case 2:
-            $(".aboutus").fadeOut("slow");
+            $(".aboutus").fadeOut(fade);
             break;
         case 3:
             
             break;
         case 4:
-            $(".themes").fadeOut("slow");
+            $(".themes").fadeOut(fade);
             break;
         case 5:
     }
     switch(page2){
         case 1:
-            $(".homepage").fadeIn("slow");
-            $(".header").fadeOut("slow");
+            $(".homepage").fadeIn(fade);
+            $(".header").fadeOut(fade);
             break;
         case 2:
-            $(".aboutus").fadeIn("slow");
+            $(".aboutus").fadeIn(fade);
             break;
         case 3:
             
             break;
         case 4:
-            $(".themes").fadeIn("slow");
+            $(".themes").fadeIn(fade);
+            if (!mobile)
+            {
+                $(".themes").css("display", "inline");
+            }
             break;
         case 5:
     }
-        if (page2 != 1)
+        if (page2 != 1 && $(window).width() < 400)
         {
-            $(".header").fadeIn("slow");
+            $(".header").fadeIn(fade);
             //$(".header").css("display", "block");
         }
     }
@@ -167,6 +178,7 @@ function init(){
     var img1 = new Image();
     var img2 = new Image();
     var img3 = new Image();
+
     img1.src = 'assets/atmosp.jpg';
     img2.src = 'assets/wlgyl.png';
     img3.src = 'assets/atmos_green.jpg';

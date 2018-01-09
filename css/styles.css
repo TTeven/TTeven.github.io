@@ -10,6 +10,7 @@
         font-family: quantify;
         src: url('../assets/fonts/Quantify.ttf');
 }
+
 .blur{
     background-size:cover;
     overflow: hidden;
@@ -53,7 +54,7 @@ body{
     transform: translate(-50%, -50%);  
 }
 .centerhome img{
-    width:40%;
+    width:50%;
     height:40%;
     padding-top: 5px; 
     padding-bottom: 50px;
@@ -227,4 +228,50 @@ body{
     position: absolute;
     min-width: 265px;
     transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 550px) {
+
+.header{
+    width:90%;    
+}
+.footer {
+    right: 0px;
+    width:100%;
+    min-width: 500px;
+    top:0%;
+    height:70px;
+    background-color:black;
+    padding-top:5px;
+    padding-bottom: 5px;
+    border-top:5px solid white;
+    border-bottom: 5px solid white;
+    position:fixed;
+    float: right;
+}
+.themes #themeone{
+    width:90%;
+    height: 150px;
+    left:50%;
+    top: 200px;
+    }
+.themes #themetwo{
+    width:90%;
+    height: 150px;
+    left:50%;
+    top: 400px;
+    }
+.themes #themethree{
+    width:90%;
+    height: 150px;
+    left:50%;
+    top:600px;
+    }
+    .circlebutton{
+        border-radius:10px;
+        width:50px;
+    }
+    .centerhome{
+        width:90%;
+    }
 }
