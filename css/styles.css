@@ -230,7 +230,7 @@ body{
     transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1441px) {
 
 .header{
     width:90%;    
