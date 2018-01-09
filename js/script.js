@@ -123,7 +123,7 @@ $('.circlebutton').hover(function() {
 function loadpage(page1, page2){    
     var fade = 200;
     var mobile = false;
-    if($(window).width() < 400)
+    if($(window).width() < 400 || $(document).width() < 400)
     {
         fade = 0;
         mobile = false;
@@ -165,7 +165,7 @@ function loadpage(page1, page2){
             break;
         case 5:
     }
-        if (page2 != 1 && $(window).width() < 1441)
+        if (page2 != 1 && ($(window).width() > 400 || $(document).width() > 400))
         {
             $(".header").fadeIn(fade);
             //$(".header").css("display", "block");
