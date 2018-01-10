@@ -3,6 +3,13 @@
 <head>
 <title>Memes</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/themes/icon.css">
+<link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/themes/color.css">
+<link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/demo/demo.css">
+<script src="js/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="js/jquery-ui.min.css">
 <script type="text/javascript" src="js/script.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -26,6 +33,11 @@
     <div id="info">
     <p style="font-family: quantify">Atmosphere is an American hip hop duo from Minneapolis, Minnesota,<br> consisting of rapper Slug (Sean Daley) and DJ/producer Ant (Anthony Davis).<br> Since its formation in 1989, the group has released eight studio albums and ten extended plays.</p>
     <p></p>
+    </div>
+    <div id="videobox">
+    <iframe width="360" height="205" src="https://www.youtube.com/embed/AckhnLpwceM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe width="360" height="205" src="https://www.youtube.com/embed/VFt1xMPnkVg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe width="360" height="205" src="https://www.youtube.com/embed/hK-EZwZviv8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 </div>
 <div id="slider2" class="aboutboxes">
@@ -132,24 +144,103 @@
 </div>
 </div>
 <div class="themes">
-<div id="themeone">
-    <h>Theme 1: "The Lonely Rose"</h>
-<div id="themeselect1" class="themebuttons">
-    <p1>Select Theme</p1>
-</div> 
+    <div id="themeone">
+        <h>Theme 1: "The Lonely Rose"</h>
+        <div id="themeselect1" class="themebuttons">
+        <p1>Select Theme</p1>
+        </div> 
+    </div>
+    <div id="themetwo">
+        <h font="phyton">Theme 2: "When life gives you lemons"</h>
+        <div id="themeselect2" class="themebuttons">
+        <p1>Select Theme</p1>
+        </div> 
+    </div>
+    <div id="themethree">
+        <h>Theme 3: "Emeralds"</h>
+        <div id="themeselect3" class="themebuttons">
+        <p1>Select Theme</p1>
+        </div> 
+    </div>
 </div>
-<div id="themetwo">
-    <h font="phyton">Theme 2: "When life gives you lemons"</h>
-<div id="themeselect2" class="themebuttons">
-    <p1>Select Theme</p1>
-</div> 
-</div>
-<div id="themethree">
-    <h>Theme 3: "Emeralds"</h>
-<div id="themeselect3" class="themebuttons">
-    <p1>Select Theme</p1>
-</div> 
-</div>
+    
+<div class="store">
+    <div class="storebox" id="storedrop">
+    <div class=storebox id="reset">Reset Cart</div>
+    <h1>Cart</h1>
+    <div id="cartbox">
+    <table id="table" style="width:320px;height: auto">
+        <thead>
+            <tr>
+                <th field="name" width=200>Name</th>
+                <th field="quantity" width=60 align="right">Quantity</th>
+                <th field="price" width=60 align="right">Price</th>
+            </tr>
+        </thead>
+    </table>
+    </div>
+    
+    <p id="total">Total: £0</p>
+    </div>
+    <div class="storebox" id="storeleft">
+    <div class="storeitem">
+        <img src= "assets/store items/overcast.jpg" alt="Logo" width="200">
+        <p class="title" data-price="12">Overcast! T-Shirt</p>
+        <p>Price: £12</p>
+    </div>
+    <div class="storeitem">
+        <div class="pricehold">
+            <img src= "assets/store items/dragonfly.jpg" alt="Logo" width="200">
+            <p class="title" data-price="20">Dragonfly T-shirt</p>
+            <p>Price: £20</p>       
+        </div>
+    </div>
+    <div class="storeitem">
+        <div class="pricehold">
+            <img src= "assets/store items/lovelife.jpg" alt="Logo" width="200">
+            <p class="title" data-price="25">Lovelife T-shirt</p>
+            <p>Price: £25</p>       
+        </div>
+    </div>
+    <div class="storeitem">
+        <div class="pricehold">
+            <img src= "assets/store items/freshwater.jpg" alt="Logo" width="200">
+            <p class="title" data-price="16">Fishing Blues Tour T-shirt</p>
+            <p>Price: £16</p>       
+        </div>
+    </div>
+    <div class="storeitem">
+        <div class="pricehold">
+            <img src= "assets/store items/7s.jpg" alt="Logo" width="200">
+            <p class="title" data-price="4">Album: Seven's Travels</p>
+            <p>Price: £4</p>       
+        </div>
+    </div>
+    <div class="storeitem">
+        <div class="pricehold">
+            <img src= "assets/store items/scbs.jpg" alt="Logo" width="200">
+            <p class="title" data-price="7">Album: Sad Clown Bad Summer</p>
+            <p>Price: £7</p>       
+        </div>
+    </div>
+    <div class="storeitem">
+        <div class="pricehold">
+            <img src= "assets/store items/overcastvinyl.jpg" alt="Logo" width="184">
+            <p class="title" data-price="40">Vinyl: Overcast (20'th Anniversary)</p>
+            <p>Price: £40</p>       
+        </div>
+    </div>
+    <div class="storeitem">
+        <div class="pricehold">
+            <img src= "assets/store items/fishingblues.jpg" alt="Logo" width="200">
+            <p class="title" data-price="7">Album: Fishing Blues</p>
+            <p>Price: £7</p>       
+        </div>
+    </div>
+    </div>
+    
+
+    
 </div>
     
 <div class="footer">

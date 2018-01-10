@@ -6,12 +6,13 @@ var song1 = new Audio('assets/music/GLU_preview.mp3');
 var song2 = new Audio('assets/music/LEM_preview.mp3');
 var song3 = new Audio('assets/music/SEV_preview.mp3');
 
+var data = {"total":0,"rows":[]};
+var totalCost = 0;
 
 $(function(){
 
 init();
 var currentpage = 1;
-
 console.log("Ready");
 //Yes i understand this code is extremely inefficent - but it is the only way i have found to work so far
     
@@ -78,6 +79,27 @@ $("#button4").click(function(){
     
     
     currentpage = 4;
+});
+$("#button5").click(function(){
+    
+    loadpage(currentpage, 5);
+    $("#table").datagrid('loadData', data);
+    //console.log($(".aboutus").css("display"));
+    
+    
+    currentpage = 5;
+});
+
+$("#reset").click(function(){
+    
+    data = {"total":0,"rows":[]};
+    $("#table").datagrid('loadData', data);
+    totalCost = 0;
+    $('#total').html('Total: £'+totalCost);
+    var shoppingcart = JSON.stringify(data);
+    var cost = totalCost.toString();
+    localStorage.setItem("cartstorage", shoppingcart);
+    localStorage.setItem("totalcost", cost);
 });
     
 $("#play1").click(function(){
@@ -215,7 +237,40 @@ $('.circlebutton').hover(function() {
     
 });
 
+
+    
+$(".storeitem").draggable({
+    helper: "clone",
+    scroll: false,
+    containment: "window",
+    stop: function( event, ui ) {}
 });
+    
+$(".storebox#storedrop").droppable({
+    accept: ".storeitem",
+    drop: function( event, ui ) {
+        var dropped = ui.draggable;
+        var name = $(dropped).find("p.title").text();
+        var price = $(dropped).find("p.title").data('price');
+        addproduct(name, parseFloat(price));
+        console.log(name);
+        console.log(price);
+        
+        
+    }
+    
+});
+    
+/*var helper = $( ".storeitem" ).draggable( "option", "helper" );
+var scroll = $( ".storeitem" ).draggable( "option", "scroll" );
+var containment = $("body").draggable( "option", "containment" );*/
+    
+$( ".storeitem" ).on( "dragstop", function( event, ui ) {console.log("dragging stopped");} );
+
+    
+});
+
+
 
 function loadpage(page1, page2){    
     var fade = 200;
@@ -241,6 +296,7 @@ function loadpage(page1, page2){
             $(".themes").fadeOut(fade);
             break;
         case 5:
+            $(".store").fadeOut(fade);
     }
     switch(page2){
         case 1:
@@ -261,6 +317,8 @@ function loadpage(page1, page2){
             }
             break;
         case 5:
+            $(".store").fadeIn(fade);
+            $('#table').datagrid('reload');  
     }
         if (page2 != 1 && ($(window).width() > 1441 || $(document).width() > 1441))
         {
@@ -275,12 +333,25 @@ function init(){
     var img1 = new Image();
     var img2 = new Image();
     var img3 = new Image();
+    $("#table").datagrid({
+       singleselect:true 
+    });
 
     img1.src = 'assets/atmosp.jpg';
     img2.src = 'assets/wlgyl.png';
     img3.src = 'assets/atmos_green.jpg';
     if (typeof(Storage) !== "undefined") {
     currenttheme = parseInt(localStorage.getItem("themestore"));
+    shoppingcart = localStorage.getItem("cartstorage");
+    if (shoppingcart != null)
+    {
+        data = JSON.parse(shoppingcart);
+        var temp = parseInt(localStorage.getItem("totalcost"));
+        totalCost = temp;
+        $('#total').html('Total: £'+totalCost);
+        
+        $("#table").datagrid('loadData', data);
+    }
     if (localStorage.getItem("themestore") === null)
     {
         settheme(1);
@@ -302,6 +373,7 @@ function init(){
     $("#bottext3").fadeTo(100, 0.10);
     $("#bottext4").fadeTo(100, 0.10);
     $("#bottext5").fadeTo(100, 0.10);
+    
 }
 
 function settheme(theme){
@@ -332,6 +404,39 @@ function settheme(theme){
             $(".blur").css("background", 'url("assets/atmos_green.jpg") no-repeat center center fixed');
             
     }
+}
+
+function addproduct(name, price){
+    function add(){
+        for(var i=0; i<data.total; i++){
+            var row = data.rows[i];
+            if (row.name === name)
+            {
+                row.quantity += 1;
+                return;
+            }
+        }
+        data.total += 1;
+        data.rows.push({
+            name: name,
+            quantity: 1,
+            price: price
+        });
+        
+    }
+    
+    add();
+    
+    totalCost += price;
+    
+    var shoppingcart = JSON.stringify(data);
+    var cost = totalCost.toString();
+    localStorage.setItem("cartstorage", shoppingcart);
+    localStorage.setItem("totalcost", cost);
+    
+    $("#table").datagrid('loadData', data);
+    $('#total').html('Total: £'+totalCost);
+    
 }
 
 

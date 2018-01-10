@@ -67,7 +67,7 @@ body{
 }
 .footer{
     position: absolute;
-    width: 99.3%;
+    width: 98%;
     min-width: 500px;
     bottom: 2%;
   
@@ -99,7 +99,7 @@ body{
 
 .aboutus{
     display:none;
-
+    font-size: 15px;
 }
 .aboutus .aboutboxes{
     width:90%;
@@ -291,7 +291,65 @@ body{
     min-width: 265px;
     transform: translate(-50%, -50%);
 }
-
+.store{
+    display: none;
+}
+.storebox{
+    position: absolute;
+    background-color: darkslateblue;
+    border: 5px solid white;
+    border-radius: 20px;
+    font-family: quantify;
+}
+.storebox#storeleft{
+    width:60%;
+    height: 77%;
+    top:11%;
+    left:5%;
+}
+.storebox#storedrop{
+    width:20%;
+    height: 77%;
+    top:11%;
+    left:70%;
+    text-align: center;
+}
+.storeitem{
+    margin:30px;
+    padding:5px;
+    text-align: center;
+    background-color: white;
+    width: 200px;
+    height: 280px;
+    display: inline-block;
+    border: 5px solid black;
+}
+#cartbox{
+    left:50%;
+    top: 13%;
+    padding-left: 35px;
+}
+#total{
+    position: absolute;
+    top:90%;
+    left:50%;
+    font-size: 30px;
+    transform: translate(-50%, -50%);
+}
+#videobox{
+    margin-left: 40px;
+}
+.storebox#reset{
+    font-family: quantify;
+    padding:10px;
+    background-color: white;
+    top:80%;
+    left:40%;
+}
+.storebox#reset:hover{
+    background-color: black;
+    color:white;
+}
 @media screen and (max-device-width: 1441px), only screen and (max-width: 1441px){
 
 .header{
@@ -318,6 +376,8 @@ body{
     }
     .tours .tourboxes{
         display: inline-grid;
+        left:50%;
+        margin-left: 70px;
     }
     .themes #themeone{
     width:90%;
@@ -357,19 +417,23 @@ body{
     .aboutus #slider1{
         top:100px;
         left: 4%;
+        height:800px;
     }
     .aboutus #slider1 #info{
         width:90%;
 
     }
     .aboutus .aboutboxes#slider2{
-        top:530px;
+        top:930px;
         height:1000px;
         left: 4%;
     }
     .musicpreview{
         padding-top: 30px;
         padding-bottom: 20px;
+    }
+    iframe{
+        width:300px;
     }
 
 }
