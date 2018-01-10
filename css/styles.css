@@ -376,6 +376,12 @@ body{
     font-size: 30px;
     transform: translate(-50%, -50%);
 }
+#header1{
+    width:200px;
+}
+#header2{
+    width:55px;
+}
 #videobox{
     margin-left: 40px;
 }
