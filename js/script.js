@@ -90,6 +90,15 @@ $("#button5").click(function(){
     currentpage = 5;
 });
 
+$("#demobutton").click(function(){
+    $(".centerhome").fadeOut(100);
+    $(".demovideo").fadeIn(100);
+});
+$("#backbutton").click(function(){
+    $(".centerhome").fadeIn(100);
+    $(".demovideo").fadeOut(100);
+});
+
 $("#reset").click(function(){
     
     data = {"total":0,"rows":[]};

@@ -55,6 +55,44 @@ body{
     top: 40%;
     transform: translate(-50%, -50%);  
 }
+.centerhome#demobutton{
+    height: 5%;
+    top:60%;
+    font-family: quantify;
+    font-size: 40px;
+}
+.centerhome#demobutton:hover{
+    background-color: white;
+    color:black;
+}
+.demovideo{
+    position:absolute;
+    width:95%;
+    height:85%;
+    background-color: darkslateblue;
+    border: 5px solid white;
+    border-radius: 30px;
+    transform: translate(-50%, -50%);
+    left:50%;
+    top:45%;
+    display: none;
+}
+.demovideo #backbutton{
+    background-color:black;
+    border:5px solid white;
+    border-radius: 30px;
+    padding: 20px;
+    font-family: quantify;
+    left:97%;
+    top:94%;
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.demovideo #backbutton:hover{
+    background-color: white;
+    color:black;
+}
 .centerhome img{
     width:200px;
     height:70px;
@@ -262,7 +300,8 @@ body{
     text-align: center;
     padding:10px;
     position:absolute;
-    font-family: phyton;
+    font-family: quantify;
+    font-size:14px;
     transform: translate(-50%, -50%);  
 }
 .themes .themebuttons:hover{
@@ -353,22 +392,22 @@ body{
 }
 @media screen and (max-device-width: 1441px), only screen and (max-width: 1441px){
 
-.header{
-    width:90%;    
-}
-.footer {
-    right: 0px;
-    width:100%;
-    top:0%;
-    height:70px;
-    background-color:black;
-    padding-top:5px;
-    padding-bottom: 5px;
-    border-top:5px solid white;
-    border-bottom: 5px solid white;
-    position:fixed;
-    min-width:0;
+    .header{
+        width:90%;    
     }
+    .footer {
+        right: 0px;
+        width:100%;
+        top:0%;
+        height:70px;
+        background-color:black;
+        padding-top:5px;
+        padding-bottom: 5px;
+        border-top:5px solid white;
+        border-bottom: 5px solid white;
+        position:fixed;
+        min-width:0;
+        }
     .tours #tourboxslider{
         top:100px;
         left:1px;
