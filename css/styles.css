@@ -227,7 +227,7 @@ body{
     
     text-align: center;
 }
-.tours button{
+.tours a{
     
     background-color: black;
     border: none;
@@ -240,7 +240,7 @@ body{
     border-radius: 5px;
     font-size: 16px;
 }
-.tours button:hover{
+.tours a:hover{
     background-color: darkslateblue;
     color: white;
 }
