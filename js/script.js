@@ -19,31 +19,31 @@ console.log("Ready");
 $('#button1').hover(function() {       
     $("#bottext1").fadeTo(200, 1); 
 }, function() {
-    $("#bottext1").fadeTo(200, 0.10);     
+    $("#bottext1").fadeTo(200, 0.40);     
 });
   
 $('#button2').hover(function() {       
     $("#bottext2").fadeTo(200, 1); 
 }, function() {
-    $("#bottext2").fadeTo(200, 0.10);     
+    $("#bottext2").fadeTo(200, 0.40);     
 });
     
 $('#button3').hover(function() {       
     $("#bottext3").fadeTo(200, 1); 
 }, function() {
-    $("#bottext3").fadeTo(200, 0.10);     
+    $("#bottext3").fadeTo(200, 0.40);     
 });
     
 $('#button4').hover(function() {       
     $("#bottext4").fadeTo(200, 1); 
 }, function() {
-    $("#bottext4").fadeTo(200, 0.10);     
+    $("#bottext4").fadeTo(200, 0.40);     
 });
     
 $('#button5').hover(function() {       
     $("#bottext5").fadeTo(200, 1); 
 }, function() {
-    $("#bottext5").fadeTo(200, 0.10);     
+    $("#bottext5").fadeTo(200, 0.40);     
 });
 
 $("#button1").click(function(){
@@ -377,11 +377,11 @@ function init(){
     $(".aboutus").fadeOut(0);
     $(".themes").css("display", "inline");
     $(".themes").fadeOut(0)*/
-    $("#bottext1").fadeTo(100, 0.10);
-    $("#bottext2").fadeTo(100, 0.10);
-    $("#bottext3").fadeTo(100, 0.10);
-    $("#bottext4").fadeTo(100, 0.10);
-    $("#bottext5").fadeTo(100, 0.10);
+    $("#bottext1").fadeTo(100, 0.40);
+    $("#bottext2").fadeTo(100, 0.40);
+    $("#bottext3").fadeTo(100, 0.40);
+    $("#bottext4").fadeTo(100, 0.40);
+    $("#bottext5").fadeTo(100, 0.40);
     
 }
 
