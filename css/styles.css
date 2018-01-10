@@ -251,7 +251,7 @@ body{
     display: none;
     text-align: center;
 }
-.themes h{
+.themes h4{
     font-family: quantify;
     position:absolute;
     display: inline;
