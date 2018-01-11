@@ -93,6 +93,19 @@ body{
     background-color: white;
     color:black;
 }
+#writtenreport{
+    border: 5px solid black;
+    border-radius: 10px;
+    width: 900px;
+    height:740px;
+    padding:10px;
+    position:absolute;
+    left:2%;
+    top:2%;
+    background-color: white;
+    display: block;
+    overflow-y: scroll;
+}
 .centerhome img{
     width:200px;
     height:70px;
