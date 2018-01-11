@@ -1,3 +1,4 @@
+/* Importing fonts from assets */
 @font-face{
     font-family: blacklist;
     src: url('../assets/fonts/The_Blacklist.ttf');
@@ -10,7 +11,7 @@
         font-family: quantify;
         src: url('../assets/fonts/Quantify.ttf');
 }
-
+/* Apply the background blur and set a default colour incase the theme doesnt load */
 .blur{
     background-size:cover;
     overflow: hidden;
@@ -25,6 +26,7 @@ body{
     background-color: black;
     background-size:cover;
 }
+/* Header at the top of the page */
 .header{
     color: white;
     border: 5px solid white;
@@ -41,6 +43,7 @@ body{
     background-color: black;
     display:none;
 }
+/* Homepage center part */
 .centerhome{
     background-color: black;
     border: 5px solid white;
@@ -65,6 +68,7 @@ body{
     background-color: white;
     color:black;
 }
+/* Demo page css */
 .demovideo{
     position:absolute;
     width:95%;
@@ -93,6 +97,7 @@ body{
     background-color: white;
     color:black;
 }
+
 #writtenreport{
     border: 5px solid black;
     border-radius: 10px;
@@ -117,42 +122,14 @@ body{
     display: block;
     font-family: quantify;
 }
-.footer{
-    position: absolute;
-    width: 98%;
-    min-width: 500px;
-    bottom: 2%;
-  
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.navlink {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.circlebutton {
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    background-color: darkgray;
-    margin: 0px 25px 0px 25px;
-}
 
-.navtext {
-    color: #fff;
-    position: relative;
-    left: -1px;
-    font-family: blacklist;
-    font-size: 20px;
-    white-space: nowrap;
-}
+/* About us page */
 
 .aboutus{
     display:none;
     font-size: 15px;
 }
+/* Set the CSS for each box */
 .aboutus .aboutboxes{
     width:90%;
     height: 35%;
@@ -160,7 +137,6 @@ body{
     border-radius: 20px;
     background-color:darkslateblue;
     position: absolute;
-    
 }
 .aboutus .aboutboxes #info{
     margin-left: 10px;
@@ -172,6 +148,7 @@ body{
     color: white;
     text-align: center;
 }
+/* Place the boxes */
 .aboutus #slider1{
     top:10%;
     left:5%;   
@@ -180,6 +157,10 @@ body{
     top:50%;
     left:5%;
     height: 37%;
+}
+/* Media boxes */
+#videobox{
+    margin-left: 40px;
 }
 #musicbox{
     text-align: center;
@@ -212,6 +193,8 @@ body{
     margin-bottom: 5px;
     border-radius: 5px;
 }
+
+/* Tour page and boxes */
 .tours{
     display:none;
 }
@@ -240,6 +223,7 @@ body{
     
     text-align: center;
 }
+/* Set each link to be a CSS button */
 .tours a{
     
     background-color: black;
@@ -260,6 +244,8 @@ body{
 .tours h2{
     font-size: 20px;
 }
+
+/* Theme page */
 .themes{
     display: none;
     text-align: center;
@@ -292,6 +278,7 @@ body{
     min-width: 265px;
     transform: translate(-50%, -50%);
 }
+/* Place boxes */
 .themes #themeone #themeselect1{
     left:50%;
     top:92%;
@@ -344,6 +331,7 @@ body{
     min-width: 265px;
     transform: translate(-50%, -50%);
 }
+/* Store page */
 .store{
     display: none;
 }
@@ -367,6 +355,7 @@ body{
     left:70%;
     text-align: center;
 }
+/* Box for each store item */
 .storeitem{
     margin:30px;
     padding:5px;
@@ -395,9 +384,6 @@ body{
 .header2{
     width:55px;
 }
-#videobox{
-    margin-left: 40px;
-}
 .storebox#reset{
     font-family: quantify;
     padding:10px;
@@ -409,6 +395,38 @@ body{
     background-color: black;
     color:white;
 }
+/* Navigation Footer */
+.footer{
+    position: absolute;
+    width: 98%;
+    min-width: 500px;
+    bottom: 2%;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.navlink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.circlebutton {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: darkgray;
+    margin: 0px 25px 0px 25px;
+}
+.navtext {
+    color: #fff;
+    position: relative;
+    left: -1px;
+    font-family: blacklist;
+    font-size: 20px;
+    white-space: nowrap;
+}
+/* Mobile Support */
 @media screen and (max-device-width: 1441px), only screen and (max-width: 1441px){
 
     .header{
