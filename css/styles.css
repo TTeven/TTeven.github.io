@@ -111,6 +111,11 @@ body{
     display: block;
     overflow-y: scroll;
 }
+#demovideo{
+    position:absolute;
+    left:63%;
+    top:20%;
+}
 .centerhome img{
     width:200px;
     height:70px;
